@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3 # O la versión más reciente
         with:
           # Sube todo el directorio dist (por defecto)
-          path: './astro'
+          path: './dist'
 
   deploy:
     needs: build
