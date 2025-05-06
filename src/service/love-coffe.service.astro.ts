@@ -33,12 +33,12 @@ export class LoveCoffe {
         ? primaryIngredients[ingredient.ingredient]
         : secundaryIngredients[ingredient.ingredient];
       return {
-        url: `/ingredients/${ingredientName}.png`,
+        url: `ingredients/${ingredientName}.png`,
         ingredient: ingredientName,
       };
     });
 
-    const characterUrl = `/characters/character${random as number + 1}.png`
+    const characterUrl = `characters/character${random as number + 1}.png`
 
     this.currentGame = { order, ingredientUrls, characterUrl }
     return this.currentGame;
@@ -47,7 +47,7 @@ export class LoveCoffe {
   public getIngredient(): GetIngredientType {
     const ramdonIngredient = Math.floor(Math.random() * 9);
     const firstIngredient = primaryIngredients[ramdonIngredient];
-    const firstIngredientUrl = `/ingredients/${firstIngredient}.png`
+    const firstIngredientUrl = `ingredients/${firstIngredient}.png`
     this.currentIngredient = { firstIngredient, firstIngredientUrl, used: false, modify: false };
     return this.currentIngredient;
   }
@@ -126,7 +126,7 @@ export class LoveCoffe {
         used: currentIngredient.used,
         modified: true,
         ingredient: secundaryIngredinet,
-        ingredientUrl: `/ingredients/${secundaryIngredinet}.png`,
+        ingredientUrl: `ingredients/${secundaryIngredinet}.png`,
       }
       this.currentIngredients[position] = ingredientModified;
       return ingredientModified;

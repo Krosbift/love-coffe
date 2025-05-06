@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4 # O la versión más reciente
         with:
-          node-version: '20' # Especifica la versión de Node que usa tu proyecto
+          node-version: '22.14.0' # Especifica la versión de Node que usa tu proyecto
           cache: 'npm' # O 'yarn', 'pnpm' según tu gestor de paquetes
 
       - name: Install dependencies
