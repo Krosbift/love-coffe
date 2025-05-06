@@ -11,5 +11,5 @@ export default defineConfig({
     }
   },
   site: 'https://Krosbift.github.io',
-  base: '/'
+  base: '/love-coffe/'
 });
