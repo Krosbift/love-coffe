@@ -33,17 +33,23 @@
         ingredientsHTML.forEach((item: Element, index: number) => {
           const htmlItem = item as HTMLElement;
           const usedLabel = htmlItem.querySelector(".used") as HTMLElement;
-          const modifiedLabel = htmlItem.querySelector(".modified") as HTMLElement;
+          const modifiedLabel = htmlItem.querySelector(
+            ".modified",
+          ) as HTMLElement;
 
           if (ingredientsData[index]) {
             if (ingredientsData[index].ingredientUrl) {
               htmlItem.style.backgroundImage = `url('${ingredientsData[index].ingredientUrl}')`;
             }
             if (usedLabel) {
-              usedLabel.style.color = ingredientsData[index].used ? "green" : "red";
+              usedLabel.style.color = ingredientsData[index].used
+                ? "green"
+                : "red";
             }
             if (modifiedLabel) {
-              modifiedLabel.style.color = ingredientsData[index].modified ? "green" : "red";
+              modifiedLabel.style.color = ingredientsData[index].modified
+                ? "green"
+                : "red";
             }
           }
         });
@@ -117,6 +123,17 @@
     .reciper {
       width: 80vw;
       height: 34vh;
+    }
+
+    .ingredient {
+      bottom: 38%;
+      left: 22%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .ingredient {
+      left: 15%;
     }
   }
 </style>
